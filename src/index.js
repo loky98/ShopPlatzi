@@ -10,9 +10,13 @@
 // npm install mini-css-extract-plugin css-loader style-loader sass sass-loader -D
 // instalar lo que falta de sas con:
 // npm install sass-loader -D
+// para poder usar rutas se instala
+// npm install react-router-dom
+// para usar el switch en el react-router-dom toca intalar una libreia mas antigua
+// npm install react-router-dom@5.2.0
 
 import React from "react"
 import ReactDOM from "react-dom";
-import App from "./components/App";
+import App from "./routes/App";
 
 ReactDOM.render(<App />, document.getElementById('app'))
