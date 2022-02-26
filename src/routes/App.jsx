@@ -28,7 +28,7 @@ const App = () => {
                     <Route exact path="my-acount" component={MyAccount} />
                     <Route exact path="create-acount" component={CreateAccount} />
                     <Route exact path="checkout" component={Checkout} />
-                    <Route ecact pacth="orders" component={orders} />
+                    <Route ecact pacth="orders" component={Orders} />
                     <Route path={"*"} component={NotFound} />
                 </Switch>
             </Layout>
