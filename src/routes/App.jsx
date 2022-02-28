@@ -14,6 +14,7 @@ import Orders from "_pages/Orders";
 import NotFound from "_pages/NotFound";
 
 import '../styles/global.css';
+import ProductList from "_containers/ProductList";
 
 const App = () => {
     return (
@@ -23,13 +24,14 @@ const App = () => {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/recovery-password" component={RecoveryPasaword} />
-                    <Route exact path="send-email" component={SendEmail} />
-                    <Route exact path="new-password" component={NewPassword} />
-                    <Route exact path="my-acount" component={MyAccount} />
-                    <Route exact path="create-acount" component={CreateAccount} />
-                    <Route exact path="checkout" component={Checkout} />
-                    <Route ecact pacth="orders" component={Orders} />
-                    <Route path={"*"} component={NotFound} />
+                    <Route exact path="/send-email" component={SendEmail} />
+                    <Route exact path="/new-password" component={NewPassword} />
+                    <Route exact path="/my-account" component={MyAccount} />
+                    <Route exact path="/create-account" component={CreateAccount} />
+                    <Route exact path="/checkout" component={Checkout} />
+                    <Route ecact pacth="/productlist" component={ProductList} />
+                    <Route ecact pacth="/orders" component={Orders} />
+                    <Route path="*" component={NotFound} />
                 </Switch>
             </Layout>
         </BrowserRouter>

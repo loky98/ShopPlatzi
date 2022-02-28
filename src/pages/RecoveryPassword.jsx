@@ -7,6 +7,7 @@ import email from '_icons/email.svg'
 const RecoveryPasaword = () => {
     return (
         <div className="login">
+        <h1> RecoveryPasaword </h1>
         <div className="form-container">
           <img src={logo} alt="logo" className="logo" />
           <h1 className="title">Email has been sent!</h1>

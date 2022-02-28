@@ -14,6 +14,10 @@
 // npm install react-router-dom
 // para usar el switch en el react-router-dom toca intalar una libreia mas antigua
 // npm install react-router-dom@5.2.0
+// para el uso de consulta de APIS intalamos axios
+// npm install axios
+// plugin para que babel pueda trabajar con axios
+// npm install @babel/plugin-transform-runtime
 
 import React from "react"
 import ReactDOM from "react-dom";
