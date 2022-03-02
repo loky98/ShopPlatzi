@@ -1,12 +1,13 @@
 import React from 'react';
+import ProductList from '_containers/ProductList'
 
 const Home = () =>{
     return (
         <div>
-        <h1> Home </h1>
             <h1>
                 React Shop
             </h1>
+            <ProductList />
         </div>
     );
 }

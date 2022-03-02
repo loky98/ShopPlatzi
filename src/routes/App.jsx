@@ -12,29 +12,33 @@ import CreateAccount from "_pages/CreateAccount";
 import Checkout from "_pages/Checkout";
 import Orders from "_pages/Orders";
 import NotFound from "_pages/NotFound";
+import AppContext from "../context/AppContext";
+import useInicialState from "../hooks/useInicialState";
 
 import '../styles/global.css';
-import ProductList from "_containers/ProductList";
+
 
 const App = () => {
+    const inicialState = useInicialState();
     return (
-        <BrowserRouter>
-            <Layout>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/login" component={Login} />
-                    <Route exact path="/recovery-password" component={RecoveryPasaword} />
-                    <Route exact path="/send-email" component={SendEmail} />
-                    <Route exact path="/new-password" component={NewPassword} />
-                    <Route exact path="/my-account" component={MyAccount} />
-                    <Route exact path="/create-account" component={CreateAccount} />
-                    <Route exact path="/checkout" component={Checkout} />
-                    <Route ecact pacth="/productlist" component={ProductList} />
-                    <Route ecact pacth="/orders" component={Orders} />
-                    <Route path="*" component={NotFound} />
-                </Switch>
-            </Layout>
-        </BrowserRouter>
+        <AppContext.Provider value={inicialState} >
+            <BrowserRouter>
+                <Layout>
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/login" component={Login} />
+                        <Route exact path="/recovery-password" component={RecoveryPasaword} />
+                        <Route exact path="/send-email" component={SendEmail} />
+                        <Route exact path="/new-password" component={NewPassword} />
+                        <Route exact path="/my-account" component={MyAccount} />
+                        <Route exact path="/create-account" component={CreateAccount} />
+                        <Route exact path="/checkout" component={Checkout} />
+                        <Route ecact pacth="/orders" component={Orders} />
+                        <Route path="*" component={NotFound} />
+                    </Switch>
+                </Layout>
+            </BrowserRouter>
+        </AppContext.Provider>
     )
 }
 

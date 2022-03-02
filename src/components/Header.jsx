@@ -1,7 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
-import '_styles/Header.scss';
 import Menu from '_components/Menu';
+import AppContext from '../context/AppContext';
+import { useContext } from 'react';
+
+import '_styles/Header.scss';
 
 import menu from '_icons/icon_menu.svg';
 import logo from '_logos/logo_yard_sale.svg';
@@ -9,6 +12,9 @@ import shoppingCart from '_icons/icon_shopping_cart.svg';
 
 const Header = () => {
     const [toggle, setToggol] = useState(false);
+    const {state} = useContext(AppContext);
+    console.log('ver el state');
+    console.log(state);
     const handleToggle = () =>{
         setToggol(!toggle);
     }
@@ -45,7 +51,7 @@ const Header = () => {
                     </li>
                     <li className="navbar-shopping-cart">
                         <img src={shoppingCart} alt="shopping cart" />
-                        <div>2</div>
+                        {state.cart.length > 0 ? <div> {state.cart.length} </div> :null}
                     </li>
                 </ul>
             </div>
