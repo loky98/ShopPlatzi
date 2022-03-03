@@ -9,12 +9,10 @@ const ProductList = () => {
 	const products = useGetProducts(URL_API);
 	return (
 		<section className="main-container">
-		<h1>ProductList</h1>
 			<div className="ProductList">
 				{products.map(product => (
 					<ProductItem product={product} key={product.id} />
 				))}
-				
 			</div>
 		</section>
 	);
